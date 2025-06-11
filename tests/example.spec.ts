@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+// Bi chan UIP nen phai chay web o local
 
 test('has title', async ({ page }) => {
   await page.goto('http://127.0.0.1:5500/index.html');
@@ -15,4 +16,8 @@ test('get started link', async ({ page }) => {
 
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'User Registration' })).toBeVisible();
+});
+
+test.afterAll(({ page }) => {
+  page.close();
 });
