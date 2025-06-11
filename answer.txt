@@ -1,0 +1,3 @@
+To install email and username: 
+- username: git config --global user.name "name"
+- email :git config --global user.email“email address”
